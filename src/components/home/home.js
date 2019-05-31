@@ -1,37 +1,52 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import NavigationIcon from '@material-ui/icons/Navigation';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Settings from '@material-ui/icons/Settings';
+
+import Waiting from '../champ-select/Waiting';
 
 const styles = theme => ({
-  fab: {
-    margin: theme.spacing.unit,
+  root: {
+    minHeight: '100vh',
+    background: '#DBD3D8',  // Tymber Wolf
+    padding: 0,
   },
-  extendedIcon: {
-    marginRight: theme.spacing.unit,
+  appbar: {
+    background: '#A73737',  // Sweet Brown
+    color: '#EFF1F3',       // Anti-Flash White
   },
-  startButton: {
+  sectionDesktop: {
     position: 'absolute',
-    right: 0,
-    left: 0,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    bottom: '15vh',
-    flexGrow: 1,
-  }
+    right: 10,
+  },
 });
 
 class Home extends Component {
-  render(){
-    const { classes} = this.props;
+  render() {
+    const { classes } = this.props;
     return (
-      <div xs={12} className={classes.startButton}>
-        <Fab variant="extended" aria-label="Delete" className={classes.fab}>
-          <NavigationIcon className={classes.extendedIcon} />
-          Comenzar
-        </Fab>
-      </div>
+      <Container className={classes.root} maxWidth='false'>
+        <CssBaseline />
+        <AppBar className={classes.appbar} position="static" color="default" elevation={7}>
+          <Toolbar>
+            <Typography variant="h6" color="inherit">
+              Draftify
+            </Typography>
+            <div className={classes.sectionDesktop}>
+              <IconButton color="inherit">
+                <Settings />
+              </IconButton>
+            </div>
+          </Toolbar>
+        </AppBar>
+        <Waiting />
+      </Container>
     );
   }
 }
