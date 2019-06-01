@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Container className={classes.root} maxWidth='false'>
+      <Container className={classes.root} maxWidth='false' style={{'-webkit-user-select': 'none'}}>
         <CssBaseline />
         <AppBar className={classes.appbar} position="static" color="default" elevation={7}>
           <Toolbar>

@@ -26,9 +26,9 @@ const styles = theme => ({
   },
   content: {
     position: 'absolute',
-    top: 150,
-    left: 78,
-    width: 350,
+    top: 130,
+    left: 55,
+    width: 325,
   },
 });
 
@@ -43,13 +43,14 @@ class Waiting extends Component {
             component='img'
             className={classes.media}
             image={require('../../assets/frame.png')}
+            draggable='false'
           />
-          <CardContent className={classes.content}>
-            <Typography gutterBottom variant="h5" component="h2">
-              Hola Invocador
+          <CardContent style={{'-webkit-user-select': 'none'}} className={classes.content}>
+            <Typography gutterBottom color="textSecondary" variant="h5" component="h2">
+              Saludos Invocador
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Comienza una partida de reclutamiento para que nuestro sistema se pueda poner en marcha
+            <Typography variant="body2" color="textSecondary" component="p" >
+              Comienza una partida de reclutamiento para que nuestro sistema se ponga en marcha
             </Typography>
           </CardContent>
         </Card>
