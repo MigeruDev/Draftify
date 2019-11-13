@@ -50,7 +50,7 @@ class Waiting extends Component {
               Saludos Invocador
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p" >
-              Comienza una partida de reclutamiento para que nuestro sistema se ponga en marcha xd
+              Comienza una partida de reclutamiento para que nuestro sistema se ponga en marcha xd  
             </Typography>
           </CardContent>
         </Card>
